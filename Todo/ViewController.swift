@@ -125,7 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if (segue.identifier == "EditTodo") {
             let viewController = segue.destinationViewController as! DetailViewController
             
-            let indexPath = tableView.indexPathForSelectedRow!
+            let indexPath = tableView.indexPathForSelectedRow! // has Bug
             viewController.todo = todos[indexPath.row]
         }
     }
